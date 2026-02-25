@@ -1,0 +1,230 @@
+/* tweet box */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f2f8ff;
+  color: #1e293b;
+}
+
+/* top bar */
+.nav {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #dbeafe;
+  position: sticky;
+  top: 0;
+}
+
+/* center top*/
+.navBox {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/*logo symbol */
+.logoDot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #60a5fa;
+}
+
+.title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+/* layout */
+.wrap {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px 40px;
+}
+
+/*white box for tweets */
+.box {
+  background: white;
+  border: 1px solid #e0f2fe;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+
+/* put input box next to pfp */
+.inputBox {
+  display: flex;
+  gap: 14px;
+}
+/*da pfp*/
+.pic {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #d1d5db;
+}
+
+/*extends input box to the right*/
+.inputRight {
+  flex: 1;
+  min-width: 0;
+}
+
+.textArea {
+  width: 100%;
+  min-height: 100px;
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 14px;
+  resize: vertical;
+}
+
+/* adjust the tweet button spacing */
+.inputActions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* size and font change for text */
+.countText {
+  font-size: 13px;
+  color: #475569;
+}
+
+/*orange when nearing word limit */
+.countText.warn {
+  color: orange;
+}
+
+/*red when past word limit*/
+.countText.bad {
+  color: red;
+}
+
+/* tweet button stuff */
+.postBtn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  background: #60a5fa;
+  color: white;
+  cursor: pointer;
+}
+
+.postBtn:hover {
+  background: #3b82f6;
+}
+
+/*shrinks button when being clicked*/
+.postBtn:active {
+  transform: scale(0.96);
+}
+
+/*when not allowed to tweet*/
+.postBtn:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* posts */
+.post {
+  display: flex;
+  gap: 14px;
+}
+
+.postRight {
+  flex: 1;
+  min-width: 0;
+}
+
+.postTop {
+  display: flex;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.userName {
+  color: gray;
+}
+
+
+.timeText {
+  color: gray;
+}
+
+/*spacing*/
+.postText {
+  margin: 10px 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* icons */
+
+/*spacing*/
+.actions {
+  display: flex;
+  gap: 18px;
+}
+
+/*take away ugly border*/
+.actBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 50%;
+  color: #64748b;
+}
+
+.actBtn.aReply:hover {
+  color: #22a1f6;
+  background: rgba(29,155,240,0.1);
+}
+
+.actBtn.aRepost:hover {
+  color: #09bd81;
+  background: rgba(0,186,124,0.1);
+}
+
+.actBtn.aLike:hover {
+  color: #fa2186;
+  background: rgba(249,24,128,0.1);
+}
+
+.actBtn.aShare:hover {
+  color: #28a2f3;
+  background: rgba(29,155,240,0.1);
+}
+
+/* help to make this compatiable for diff scren types */
+@media (max-width: 600px) {
+  .inputBox {
+    flex-direction: column;
+  }
+
+  .inputActions {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .postBtn {
+    width: 100%;
+  }
+}
