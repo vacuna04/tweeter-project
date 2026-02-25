@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Tweeter</title>
+
+  <!-- icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- top bar -->
+  <header class="nav">
+    <div class="navBox">
+      <div class="logoDot" aria-hidden="true"></div>
+      <h1 class="title">Tweeter</h1>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- tweet input area -->
+    <section class="box inputBox">
+      <div class="inputLeft">
+        <div class="pic" aria-hidden="true"></div>
+      </div>
+
+      <div class="inputRight">
+        <textarea
+          id="textBox"
+          class="textArea"
+          rows="4"
+          placeholder="What's happening?"
+        ></textarea>
+
+        <div class="inputActions">
+          <span id="countLabel" class="countText">160 char remaining</span>
+          <button id="postBtn" class="postBtn" type="button">tweeet</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- tweets feed -->
+    <section class="feed">
+
+      <!-- sample tweet -->
+      <article class="box post">
+        <div class="postLeft">
+          <div class="pic" aria-hidden="true"></div>
+        </div>
+
+        <div class="postRight">
+          <div class="postTop">
+            <span class="displayName">Victoria Acuna</span>
+            <span class="userName">@VictoriaAcunaUTRGV</span>
+            <span class="sepDot">•</span>
+            <span class="timeText">Just now</span>
+          </div>
+
+          <p class="postText">Hey, CSCI 3342 is so cool!</p>
+
+          <div class="actions">
+            <button class="actBtn aReply">
+              <i class="fa-regular fa-comment"></i>
+            </button>
+            <button class="actBtn aRepost">
+              <i class="fa-solid fa-retweet"></i>
+            </button>
+            <button class="actBtn aLike">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button class="actBtn aShare">
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <div id="newFeed"></div>
+
+    </section>
+
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
